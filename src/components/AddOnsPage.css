@@ -1,0 +1,100 @@
+.addons-page {
+  position: relative;
+  min-height: 100vh;
+  color: #0a2a66;
+  overflow: hidden;
+}
+
+.addons-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.pexels.com/photos/30004067/pexels-photo-30004067.jpeg?_gl=1*iuhyrr*_ga*NjE4MDE0NzA4LjE3NjIwODM1MjM.*_ga_8JE65Q40S6*czE3NjIyNjEwODckbzMkZzEkdDE3NjIyNjE0NzIkajM0JGwwJGgw") center/cover no-repeat;
+  filter: blur(6px) brightness(70%);
+  z-index: -1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a2a66;
+  color: white;
+  padding: 15px 30px;
+}
+
+.page-title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.addons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.addon-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 280px;
+  height: 350px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.addon-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background-color: #0096a5;
+}
+
+.total-section {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #0a2a66;
+  font-weight: bold;
+}

@@ -1,0 +1,153 @@
+.product-page {
+  position: relative;
+  min-height: 100vh;
+  color: #0a2a66;
+  overflow: hidden;
+}
+
+/* 🔹 Blurred background like Landing Page */
+.product-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.pexels.com/photos/30004067/pexels-photo-30004067.jpeg?_gl=1*iuhyrr*_ga*NjE4MDE0NzA4LjE3NjIwODM1MjM.*_ga_8JE65Q40S6*czE3NjIyNjEwODckbzMkZzEkdDE3NjIyNjE0NzIkajM0JGwwJGgw") center/cover no-repeat;
+  filter: blur(6px) brightness(75%);
+  z-index: -1;
+}
+
+/* Keep cards readable */
+.section-title,
+.room-container,
+.total-section {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a2a66;
+  color: white;
+  padding: 15px 30px;
+}
+
+.navbar h2 {
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.details-btn {
+  background-color: #f4b400;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: #dba500;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin: 30px 0;
+  color: #0a2a66;
+  font-size: 1.8rem;
+}
+
+/* Room Cards */
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.room-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 280px;
+  height: 360px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.room-card h4 {
+  margin: 10px 0 5px;
+  color: #0a2a66;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background-color: #0096a5;
+}
+
+/* Total */
+.total-section {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #0a2a66;
+  font-weight: bold;
+}
+/* Page Title Styling (for Venue Room Selection) */
+.page-title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
