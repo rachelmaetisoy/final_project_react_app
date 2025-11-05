@@ -110,7 +110,9 @@ const AddOnsPage = ({ onNavigate, onAddSelections, onShowDetails, selections = [
           <div className="addon-card" key={index}>
             <img src={item.image} alt={item.name} />
             <h4>{item.name}</h4>
-            <p className="price">${item.price}</p>
+           <p className="price">
+  ${item.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+</p>
             <div className="quantity-controls">
               <button onClick={() => handleDecrement(index)}>-</button>
               <span>{quantities[index]}</span>
@@ -122,7 +124,7 @@ const AddOnsPage = ({ onNavigate, onAddSelections, onShowDetails, selections = [
 
       {/*  Total Section */}
       <div className="total-section">
-        <h3>Total Cost: ${totalCost.toLocaleString()}</h3>
+        <h3>Total Cost: ${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h3>
       </div>
     </div>
   );

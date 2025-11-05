@@ -128,7 +128,10 @@ const ProductSelectionPage = ({ onNavigate, onAddSelections, onShowDetails, sele
             <img src={room.image} alt={room.name} />
             <h4>{room.name}</h4>
             <p className="capacity-text">(Capacity: {room.capacity})</p>
-            <p className="price-tag">${room.price.toLocaleString()} each</p>
+            <p className="price-tag">
+  ${room.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+</p>
+
 
             <div className="quantity-controls">
               <button onClick={() => handleDecrement(index)}>-</button>
@@ -141,7 +144,7 @@ const ProductSelectionPage = ({ onNavigate, onAddSelections, onShowDetails, sele
 
       {/* Total Cost */}
       <div className="total-section">
-        <h3>Total Cost: ${totalCost.toLocaleString()}</h3>
+        <h3>Total Cost: ${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h3>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ function ShowDetailsModal({ selections, totalCost, onClose }) {
     <div className="modal-overlay">
       <div className="modal-content">
         <h2>TOTAL COST FOR THE EVENT</h2>
-        <h1>${totalCost.toLocaleString()}</h1>
+       <h1>${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h1>
 
         <table className="details-table">
           <thead>
@@ -43,15 +43,21 @@ function ShowDetailsModal({ selections, totalCost, onClose }) {
             {selectedItems.map((item) => (
               <tr key={item.name}>
                 <td>{item.name}</td>
-                <td>${item.price.toLocaleString()}</td>
-                <td>{item.quantity}</td>
-                <td>${(item.price * item.quantity).toLocaleString()}</td>
+                <td>
+  ${item.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+</td>
+<td>{item.quantity}</td>
+<td>
+  ${(item.price * item.quantity).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+</td>
               </tr>
             ))}
           </tbody>
         </table>
 
-        <h3 className="bottom-total">Total Cost: ${totalCost.toLocaleString()}</h3>
+        <h3 className="bottom-total">
+  Total Cost: ${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+</h3>
 
         <button className="close-btn" onClick={onClose}>
           Close

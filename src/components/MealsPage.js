@@ -117,14 +117,16 @@ const MealsPage = ({ onNavigate, onAddSelections, onShowDetails, selections = []
               />
               <strong>{meal.name}</strong>
             </label>
-            <p>${meal.price} per person</p>
+            <p>
+  ${meal.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} per person
+</p>
           </div>
         ))}
       </div>
 
       {/* ✅ Total Section */}
       <div className="total-section">
-        <h3>Total Cost: ${totalCost.toLocaleString()}</h3>
+        <h3>Total Cost: ${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h3>
       </div>
     </div>
   );
